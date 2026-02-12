@@ -1,0 +1,45 @@
+<odoo>
+    <record id="view_enrollment_form" model="ir.ui.view">
+        <field name="name">academy.enrollment.form</field>
+        <field name="model">academy.enrollment</field>
+        <field name="arch" type="xml">
+            <form string="Inscripción">
+                <sheet>
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="student_id"/>
+                        <field name="course_id"/>
+                        <field name="enrollment_date"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_enrollment_list" model="ir.ui.view">
+        <field name="name">academy.enrollment.list</field>
+        <field name="model">academy.enrollment</field>
+        <field name="arch" type="xml">
+            <list string="Inscripciones">
+                <field name="name"/>
+                <field name="student_id"/>
+                <field name="course_id"/>
+                <field name="enrollment_date"/>
+                <field name="status"
+                    widget="badge"
+                    decoration-danger="status in ('rejected', 'failed')"
+                    decoration-success="status in ('passed', 'exempted')"
+                    decoration-info="status == 'enrolled'"
+                    decoration-warning="status == 'pending'"
+                 />
+            </list>
+        </field>
+    </record>
+
+    <record id="academy_enrollment_action" model="ir.actions.act_window">
+        <field name="name">Inscripciones</field>
+        <field name="res_model">academy.enrollment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

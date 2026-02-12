@@ -1,0 +1,22 @@
+{
+    'name': 'Academy Management',
+    'version': '1.0',
+    'author': 'Francisco Trujillo',
+    'category': 'Education',
+    'summary': 'Module to manage students and teachers information',
+    'description': 'This module allows you to manage information about students and teachers.',
+    'depends': ['base', 'mail', 'contacts', 'calendar'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/student_views.xml',
+        'views/teacher_views.xml',
+        'views/course_views.xml',
+        'views/enrollment_views.xml',
+        'views/subject_views.xml',
+        'views/grade_views.xml',
+        'views/menu.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'license': 'LGPL-3',
+}

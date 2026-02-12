@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem
+        id="academy_menu_root"
+        name="Academia"
+        sequence="1"
+    />
+
+    <record id="academy_student_action" model="ir.actions.act_window">
+        <field name="name">Estudiantes</field>
+        <field name="res_model">academy.student</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="academy_teacher_action" model="ir.actions.act_window">
+        <field name="name">Profesores</field>
+        <field name="res_model">academy.teacher</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="academy_course_action" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="res_model">academy.course</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="academy_subject_action" model="ir.actions.act_window">
+        <field name="name">Asignaturas</field>
+        <field name="res_model">academy.subject</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="academy_grade_action" model="ir.actions.act_window">
+        <field name="name">Calificaciones</field>
+        <field name="res_model">academy.grade</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+        id="academy_menu_students"
+        name="Estudiantes"
+        parent="academy_menu_root"
+        action="academy_student_action"
+        sequence="1"
+    />
+
+    <menuitem
+        id="academy_menu_teachers"
+        name="Profesores"
+        parent="academy_menu_root"
+        action="academy_teacher_action"
+        sequence="2"
+    />
+
+    <menuitem
+        id="academy_menu_courses"
+        name="Cursos"
+        parent="academy_menu_root"
+        action="academy_course_action"
+        sequence="3"
+    />
+
+    <menuitem
+        id="academy_menu_enrollments"
+        name="Inscripciones"
+        parent="academy_menu_root"
+        action="academy_enrollment_action"
+        sequence="4"
+    />
+
+    <menuitem
+        id="academy_menu_grades"
+        name="Calificaciones"
+        parent="academy_menu_root"
+        action="academy_grade_action"
+        sequence="5"
+    />
+
+    <menuitem
+        id="academy_menu_subjects"
+        name="Asignaturas"
+        parent="academy_menu_root"
+        action="academy_subject_action"
+        sequence="6"
+    />
+
+</odoo>

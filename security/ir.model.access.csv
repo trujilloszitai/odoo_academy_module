@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_academy_student_user,access.academy.student.user,model_academy_student,base.group_user,1,1,1,0
+access_academy_teacher_user,access.academy.teacher.user,model_academy_teacher,base.group_user,1,1,1,0
+access_academy_course_user,access.academy.course.user,model_academy_course,base.group_user,1,1,1,0
+access_academy_grade_user,access.academy.grade.user,model_academy_grade,base.group_user,1,1,1,0
+access_academy_subject_user,access.academy.subject.user,model_academy_subject,base.group_user,1,1,1,0
+access_academy_enrollment_user,access.academy.enrollment.user,model_academy_enrollment,base.group_user,1,1,1,0

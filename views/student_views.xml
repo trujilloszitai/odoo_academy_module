@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_student_form" model="ir.ui.view">
+        <field name="name">academy.student.form</field>
+        <field name="model">academy.student</field>
+        <field name="arch" type="xml">
+            <form string="Estudiante">
+                <sheet>
+                    <group>
+                        <field name="partner_id" string="Nombre Completo"/>
+                        <field name="file"/>
+                        <field name="enrollment_date"/>
+                        <field name="avg_grade" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_student_list" model="ir.ui.view">
+        <field name="name">academy.student.list</field>
+        <field name="model">academy.student</field>
+        <field name="arch" type="xml">
+            <list string="Estudiantes">
+                <field name="partner_id" string="Nombre Completo"/>
+                <field name="file"/>
+                <field name="enrollment_date"/>
+                <field name="avg_grade" 
+                    readonly="1" 
+                    widget="badge"
+                    decoration-danger="avg_grade &lt; 4.0"
+                    decoration-info="avg_grade &gt;= 4.0 and avg_grade &lt; 7.0"
+                    decoration-success="avg_grade &gt;= 7.0"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="action_student" model="ir.actions.act_window">
+        <field name="name">Estudiantes</field>
+        <field name="res_model">academy.student</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
